@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ParseGoogleAuth" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Eu-Dc-F0O" customClass="GIDSignInButton">
+                                <rect key="frame" x="180" y="236" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="MAL-Hb-nJl"/>
+                                    <constraint firstAttribute="height" constant="128" id="xjU-59-gj1"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in with Google &amp; Parse" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WTs-Nz-3LF">
+                                <rect key="frame" x="195" y="207" width="211" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3x7-hS-KaA">
+                                <rect key="frame" x="227" y="542" width="147" height="38"/>
+                                <color key="backgroundColor" red="0.16045718450307545" green="0.27977903131202686" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" title="Logout from Parse">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="logOutParse" destination="BYZ-38-t0r" eventType="touchUpInside" id="9RO-5R-dff"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5Eu-Dc-F0O" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4R4-1t-mVe"/>
+                            <constraint firstItem="5Eu-Dc-F0O" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bd0-He-i4O"/>
+                            <constraint firstAttribute="bottom" secondItem="3x7-hS-KaA" secondAttribute="bottom" constant="20" symbolic="YES" id="KeZ-7q-4oj"/>
+                            <constraint firstItem="3x7-hS-KaA" firstAttribute="centerX" secondItem="5Eu-Dc-F0O" secondAttribute="centerX" id="N2v-eI-8fp"/>
+                            <constraint firstItem="WTs-Nz-3LF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tL8-bu-DUd"/>
+                            <constraint firstItem="5Eu-Dc-F0O" firstAttribute="top" secondItem="WTs-Nz-3LF" secondAttribute="bottom" constant="8" id="tvN-d3-fiL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="signInButton" destination="5Eu-Dc-F0O" id="gQb-fR-qkD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="440" y="387"/>
+        </scene>
+    </scenes>
+</document>
